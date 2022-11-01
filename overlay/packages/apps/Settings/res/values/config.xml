@@ -22,4 +22,17 @@
     <bool name="config_show_connectivity_helper_call_quality">true</bool>
     <!-- The switch preference's default value of connectivity helper DeviceToDevice-->
     <bool name="config_show_connectivity_helper_d2d">true</bool>
+
+    <!-- From TrafficLightFaceOverlay -->
+    <integer-array name="face_enroll_primary_buckets">
+        <item>2</item>
+        <item>7</item>
+        <item>12</item>
+        <item>17</item>
+    </integer-array>
+    <bool name="config_face_education_use_lottie">true</bool>
+    <bool name="config_face_enroll_use_traffic_light">true</bool>
+    <bool name="config_face_intro_show_less_secure">true</bool>
+    <bool name="config_face_intro_show_require_eyes">false</bool>
+
 </resources>
