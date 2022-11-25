@@ -83,10 +83,14 @@
         <item>device_personalization_services/Overview__enable_proactive_hints=false</item>
         <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
         <item>device_personalization_services/Overview__min_lens_agsa_app_version=301084649</item>
+
         <!-- Disable federated learning -->
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+
+        <!-- Now Playing Database -->
+        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=235:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20221120-030106/manifest.json</item>
 
     </string-array>
 
