@@ -66,7 +66,7 @@ PRODUCT_SOONG_NAMESPACES += \
 	vendor/samsung_slsi/telephony/$(BOARD_USES_SHARED_VENDOR_TELEPHONY)
 endif
 
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 #Set IKE logs to verbose for WFC
 PRODUCT_PROPERTY_OVERRIDES += log.tag.IKE=VERBOSE
 
@@ -331,7 +331,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.contexthub-service.generic
 
 # CHRE tools
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PACKAGES += \
 	chre_power_test_client \
 	chre_test_client
@@ -361,7 +361,7 @@ PRODUCT_PACKAGES += \
 	checkpoint_gc
 
 # Vendor verbose logging default property
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.verbose_logging_enabled=true
 else
@@ -715,7 +715,7 @@ PRODUCT_PACKAGES += wpa_supplicant.conf
 
 WIFI_PRIV_CMD_UPDATE_MBO_CELL_STATUS := enabled
 
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PACKAGES += wpa_cli
 PRODUCT_PACKAGES += hostapd_cli
 endif
@@ -825,7 +825,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 # System props to enable Bluetooth Quality Report (BQR) feature
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PRODUCT_PROPERTIES += \
 	persist.bluetooth.bqr.event_mask?=262174 \
 	persist.bluetooth.bqr.min_interval_ms=500
@@ -866,7 +866,7 @@ PRODUCT_PACKAGES += \
 	Iwlan
 
 #Iwlan test app for userdebug/eng builds
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PACKAGES += \
 	IwlanTestApp
 endif
@@ -889,9 +889,11 @@ $(call inherit-product-if-exists, vendor/samsung_slsi/telephony/$(BOARD_USES_SHA
 
 PRODUCT_PACKAGES += ShannonIms
 
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 #RCS Test Messaging App
 PRODUCT_PACKAGES_DEBUG += \
 	TestRcsApp
+endif
 
 PRODUCT_PACKAGES += ShannonRcs
 endif
@@ -935,7 +937,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.sys.modem.logging.enable=true
 
 # Enable silent CP crash handling
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.ril.crash_handling_mode=1
 else
@@ -1078,7 +1080,7 @@ PRODUCT_PACKAGES += vndservicemanager
 PRODUCT_PACKAGES += vndservice
 
 ## TinyTools, debug tool and cs35l41 speaker calibration tool for Audio
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 PRODUCT_PACKAGES += \
 	tinyplay \
 	tinycap \
@@ -1164,8 +1166,10 @@ USES_RADIOEXT_V1_5 = true
 # Wifi ext
 include hardware/google/pixel/wifi_ext/device.mk
 
+ifeq ($(BUILD_DEBUG_VENDOR),true)
 # Battery Stats Viewer
 PRODUCT_PACKAGES_DEBUG += BatteryStatsViewer
+endif
 
 # Install product specific framework compatibility matrix
 # (TODO: b/169535506) This includes the FCM for system_ext and product partition.
