@@ -90,7 +90,7 @@
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
 
         <!-- Now Playing Database -->
-        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=235:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20221120-030106/manifest.json</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=243:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20230212-030106/manifest.json</item>
 
     </string-array>
 
