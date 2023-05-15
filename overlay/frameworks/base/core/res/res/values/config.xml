@@ -293,41 +293,6 @@
         <item>"com.android.phone"</item>
     </string-array>
 
-    <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
-    <integer name="config_udfps_illumination_transition_ms">0</integer>
-
-    <!-- Whether device supports increased touch sensitvity -->
-    <bool name="config_supportGloveMode">true</bool>
-
     <!-- Exempt ImsService from privacy (location) indicators -->
-    <string name="config_systemTelephonyPackage" translatable="false">com.shannon.imsservice</string>
-
-    <!-- The properties of a UDFPS sensor in pixels -->
-    <integer-array name="config_udfps_sensor_props">
-      <item>720</item>  <!-- sensorLocationX -->
-      <item>2364</item> <!-- sensorLocationY -->
-      <item>142</item>  <!-- sensorRadius -->
-    </integer-array>
-    
-    <!-- Default apps -->
-    <string name="config_defaultDialer" translatable="false">com.google.android.dialer</string>
-    <string name="config_defaultGallery" translatable="false">com.google.android.apps.photos</string>
-    <string name="config_defaultSms" translatable="false">com.google.android.apps.messaging</string>
-    <string name="config_systemSpeechRecognizer" translatable="false">com.google.android.tts</string>
-    
-    <!-- Reverse Charging --> 
-    <bool name="config_show_reverse_charging">true</bool>
-
-    <!-- Whether the device supports Smart Pixels -->
-    <bool name="config_supportSmartPixels">false</bool>
-
-    <!-- Whether to show min/max refresh rate in display settings -->
-    <bool name="config_show_refresh_rate_controls">true</bool>
-    <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
-
-    <!-- Pocket Lock -->
-    <bool name="config_pocketModeSupported">true</bool>   
-    
-    <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>   
+    <string name="config_systemTelephonyPackage" translatable="false">com.shannon.imsservice</string>  
 </resources>
