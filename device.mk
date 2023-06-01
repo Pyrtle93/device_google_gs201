@@ -23,6 +23,9 @@ TENSOR_PIXEL2 := true
 # SoC
 PROCESSOR_MODEL := GS201
 
+# UDFPS animations
+EXTRA_UDFPS_ANIMATIONS := true
+
 AB_OTA_POSTINSTALL_CONFIG += \
 	RUN_POSTINSTALL_system=true \
 	POSTINSTALL_PATH_system=system/bin/otapreopt_script \
