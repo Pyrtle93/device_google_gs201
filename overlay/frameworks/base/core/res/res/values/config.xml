@@ -171,10 +171,10 @@
 
     <!-- The default refresh rate. P21 manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
-    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultRefreshRate">120</integer>
 
     <!-- The default peak refresh rate. -->
-    <integer name="config_defaultPeakRefreshRate">60</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- Optional IPsec algorithms enabled by this device, defaulting to empty. OEMs can override
          it by providing a list of algorithm names in an overlay config.xml file.
@@ -296,3 +296,4 @@
     <!-- Exempt ImsService from privacy (location) indicators -->
     <string name="config_systemTelephonyPackage" translatable="false">com.shannon.imsservice</string>  
 </resources>
+
