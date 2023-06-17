@@ -26,6 +26,10 @@ PROCESSOR_MODEL := GS201
 # UDFPS animations
 EXTRA_UDFPS_ANIMATIONS := true
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 AB_OTA_POSTINSTALL_CONFIG += \
 	RUN_POSTINSTALL_system=true \
 	POSTINSTALL_PATH_system=system/bin/otapreopt_script \
