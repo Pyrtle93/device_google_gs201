@@ -35,4 +35,7 @@
     <bool name="config_face_intro_show_less_secure">true</bool>
     <bool name="config_face_intro_show_require_eyes">false</bool>
 
+    <!-- Whether to show refresh rate in display settings -->
+    <bool name="config_show_refresh_rate_controls">true</bool>
+
 </resources>
