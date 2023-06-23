@@ -15,6 +15,7 @@
 -->
 <!-- Pixel specific connectivity overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:allowBackup="false"
     package="com.android.connectivity.resources.overlay"
     android:versionCode="1"
     android:versionName="1.0">
