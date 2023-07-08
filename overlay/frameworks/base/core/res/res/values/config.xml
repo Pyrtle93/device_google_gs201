@@ -302,4 +302,9 @@
     <!-- The name of the package that will hold the dialer role by default. -->
     <string name="config_defaultDialer" translatable="false">com.google.android.dialer</string>
 
+    <!-- The list of packages to force slowJpegMode for Apps using Camera API1 -->
+    <string-array name="config_forceSlowJpegModeList" translatable="false">
+        <item>com.facebook.orca</item>
+        <item>com.skype.raider</item>
+    </string-array>
 </resources>
