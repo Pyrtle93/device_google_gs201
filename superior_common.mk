@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/google/gs201/overlay-xtended
+DEVICE_PACKAGE_OVERLAYS += device/google/gs201/overlay-superior
 
 # Face Unlock
 PRODUCT_PACKAGES += \
